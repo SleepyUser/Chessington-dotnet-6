@@ -1,14 +1,18 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace Chessington.GameEngine.Pieces
 {
     public abstract class Piece
     {
+
         protected Piece(Player player)
         {
             Player = player;
         }
-
+        
+        protected static Piece LastTurnPawn; //For en passant functionality
+        
         public Player Player { get; private set; }
 
         public abstract IEnumerable<Square> GetAvailableMoves(Board board);
@@ -17,6 +21,7 @@ namespace Chessington.GameEngine.Pieces
         {
             var currentSquare = board.FindPiece(this);
             board.MovePiece(currentSquare, newSquare);
+            LastTurnPawn = null;
         }
         
         protected void RelativeMove(Square currentLoc, List<Square> availableMoves, int colMod, int rowMod, Board board, int playerMod = 1, bool ignorePath = false, bool canTake = true)

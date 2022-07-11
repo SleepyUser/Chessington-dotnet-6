@@ -1,3 +1,4 @@
+using Chessington.GameEngine;
 using Chessington.GameEngine.Pieces;
 
 namespace Chessington.UI.Notifications

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using Chessington.GameEngine.Pieces;
 
 namespace Chessington.GameEngine
@@ -40,7 +41,7 @@ namespace Chessington.GameEngine
             throw new ArgumentException("The supplied piece is not on the board.", "piece");
         }
 
-        public void MovePiece(Square from, Square to)
+        public void MovePiece(Square from, Square to, bool enPassant = false)
         {
             var movingPiece = _board[from.Row, from.Col];
             if (movingPiece == null) { return; }
@@ -53,7 +54,14 @@ namespace Chessington.GameEngine
             //If the space we're moving to is occupied, we need to mark it as captured.
             if (_board[to.Row, to.Col] != null)
             {
+                CapturedPieces.Add(_board[to.Row, to.Col]); //Currently does not function, fix for this
                 OnPieceCaptured(_board[to.Row, to.Col]);
+            }
+            else if (enPassant) //Else, if enPassant is true
+            {
+                CapturedPieces.Add(_board[from.Row, to.Col]); //Currently does not function, fix for this
+                OnPieceCaptured(_board[from.Row, to.Col]);
+                _board[from.Row, to.Col] = null;
             }
 
             //Move the piece and set the 'from' square to be empty.
