@@ -1,4 +1,53 @@
 ﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=52b2c9f6_002D43eb_002D414d_002Dbd63_002D16b416e1e90a/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="BoardTests" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=0632894f_002Db1d7_002D4d88_002Db26a_002Dbad872134bf2/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="WhitePawns_CanMoveOneSquareUp #6" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::396CBAEB-ABB0-44BC-B25A-71FD73F4C3F7::net6.0-windows7.0::Chessington.GameEngine.Tests.Pieces.PawnTests.WhitePawns_CanMoveOneSquareUp&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=0fe1ed66_002D3c7d_002D4c23_002D8579_002D3f189406a1ee/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="WhitePawns_CanMoveOneSquareUp #4" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::396CBAEB-ABB0-44BC-B25A-71FD73F4C3F7::net6.0-windows7.0::Chessington.GameEngine.Tests.Pieces.PawnTests.WhitePawns_CanMoveOneSquareUp&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=22b4b003_002D8ee5_002D4879_002D942f_002D6d96a2f31285/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="WhitePawns_CanMoveOneSquareUp #3" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::396CBAEB-ABB0-44BC-B25A-71FD73F4C3F7::net6.0-windows7.0::Chessington.GameEngine.Tests.Pieces.PawnTests.WhitePawns_CanMoveOneSquareUp&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=512c51df_002Daeeb_002D417d_002D9751_002D3205cdbfc3e0/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="WhitePawns_CanMoveOneSquareUp #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::396CBAEB-ABB0-44BC-B25A-71FD73F4C3F7::net6.0-windows7.0::Chessington.GameEngine.Tests.Pieces.PawnTests.WhitePawns_CanMoveOneSquareUp&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=52b2c9f6_002D43eb_002D414d_002Dbd63_002D16b416e1e90a/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="BoardTests" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;Solution /&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=60634740_002D83c2_002D46ef_002D83c8_002D5bd8496b34ad/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="WhitePawns_CanMoveOneSquareUp" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::396CBAEB-ABB0-44BC-B25A-71FD73F4C3F7::net6.0-windows7.0::Chessington.GameEngine.Tests.Pieces.PawnTests.WhitePawns_CanMoveOneSquareUp&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=862e4d6a_002D4bcf_002D495c_002D97cb_002Dfb821517d962/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="WhitePawns_CanMoveOneSquareUp #7" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::396CBAEB-ABB0-44BC-B25A-71FD73F4C3F7::net6.0-windows7.0::Chessington.GameEngine.Tests.Pieces.PawnTests.WhitePawns_CanMoveOneSquareUp&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=b0be01de_002Df054_002D4f07_002D9e4a_002D87a3a8718651/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="WhitePawns_CanMoveOneSquareUp #9" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;Solution /&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=ba6619a5_002Dd531_002D4e82_002D844e_002Df1176ae7d92b/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="All tests from Solution #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;Solution /&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=ca7c6ec9_002D4da3_002D4b69_002Db317_002D2c3aa564230d/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="All tests from Solution" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;Solution /&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=d3291fac_002D8302_002D4e50_002Dbac2_002D6898298eb15f/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="WhitePawns_CanMoveOneSquareUp #8" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::396CBAEB-ABB0-44BC-B25A-71FD73F4C3F7::net6.0-windows7.0::Chessington.GameEngine.Tests.Pieces.PawnTests.WhitePawns_CanMoveOneSquareUp&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=d64c51ae_002Dadb2_002D459f_002Dbc26_002Dfa0202675694/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="WhitePawns_CanMoveOneSquareUp #5" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::396CBAEB-ABB0-44BC-B25A-71FD73F4C3F7::net6.0-windows7.0::Chessington.GameEngine.Tests.Pieces.PawnTests.WhitePawns_CanMoveOneSquareUp&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

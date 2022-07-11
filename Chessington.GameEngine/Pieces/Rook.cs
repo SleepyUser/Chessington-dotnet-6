@@ -16,8 +16,10 @@ namespace Chessington.GameEngine.Pieces
             int playerMod = (Player == Player.White) ? -1 : 1; //Modifies the move based on the owner
             for(int i = 0; i < GameSettings.BoardSize; i++)
             {
-                AbsoluteMove(currentLoc, availableMoves, i, currentLoc.Row);
-                AbsoluteMove(currentLoc, availableMoves, currentLoc.Col, i );
+                RelativeMove(currentLoc, availableMoves, i, currentLoc.Row, board, ignorePath:false);
+                RelativeMove(currentLoc, availableMoves, -i, currentLoc.Row, board, ignorePath:false);
+                RelativeMove(currentLoc, availableMoves, currentLoc.Col, i, board, ignorePath:false);
+                RelativeMove(currentLoc, availableMoves, currentLoc.Col, -i, board, ignorePath:false);
             }
             
             Console.WriteLine(availableMoves);

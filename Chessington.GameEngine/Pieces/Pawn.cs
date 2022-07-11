@@ -16,11 +16,11 @@ namespace Chessington.GameEngine.Pieces
             Square currentloc = board.FindPiece(this);
             List<Square> availableMoves = new List<Square>();
             int playerMod = (Player == Player.White) ? -1 : 1; //Modifies the move based on the owner
-            RelativeMove(currentloc, playerMod, availableMoves, 0, 1, board);
+            RelativeMove(currentloc, availableMoves, 0, 1, board, playerMod, canTake:false);
             
-            if (!moved && availableMoves.Count > 0)
+            if (!moved)// && availableMoves.Count > 0)
             {
-                RelativeMove(currentloc, playerMod, availableMoves, 0, 2, board);
+                RelativeMove(currentloc, availableMoves, 0, 2, board, playerMod, canTake:false);
             }
             
             return availableMoves;
