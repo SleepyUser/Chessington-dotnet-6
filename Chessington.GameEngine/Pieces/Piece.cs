@@ -28,9 +28,13 @@ namespace Chessington.GameEngine.Pieces
                 return;
             if (s == currentLoc) // if current index
                 return;
-            s = ClearPath(currentLoc, s, board);
-            if (s.Col == -1 || !ignorePath) //if path is NOT clear (allied piece), return
-                return;
+            if (ignorePath == false)
+            {
+                s = ClearPath(currentLoc, s, board);
+                if (s.Col == -1) //if path is NOT clear (allied piece), return
+                    return;
+            }
+
             if (board.GetPiece(s) != null)
             {
                 if (board.GetPiece(s).Player == Player)
@@ -38,6 +42,7 @@ namespace Chessington.GameEngine.Pieces
                 else if (board.GetPiece(s).Player != Player && canTake == false)
                     return;
             }
+
             if (!availableMoves.Contains(s)) //if it is not already in the list
                 availableMoves.Add(s); // Adds move to list
             else

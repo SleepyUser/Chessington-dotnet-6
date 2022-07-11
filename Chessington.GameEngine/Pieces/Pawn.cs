@@ -20,7 +20,7 @@ namespace Chessington.GameEngine.Pieces
             
             if (!moved)// && availableMoves.Count > 0)
             {
-                RelativeMove(currentloc, availableMoves, 0, 2, board, playerMod, canTake:false);
+                RelativeMove(currentloc, availableMoves, 0, 2, board, playerMod, canTake:false, ignorePath:false);
             }
             
             return availableMoves;
