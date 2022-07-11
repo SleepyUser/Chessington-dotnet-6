@@ -10,7 +10,19 @@ namespace Chessington.GameEngine.Pieces
 
         public override IEnumerable<Square> GetAvailableMoves(Board board)
         {
-            return Enumerable.Empty<Square>();
+            Square currentloc = board.FindPiece(this);
+            List<Square> availableMoves = new List<Square>();
+            int playerMod = (Player == Player.White) ? -1 : 1; //Modifies the move based on the owner
+            RelativeMove(currentloc, playerMod, availableMoves, 2, 1);
+            RelativeMove(currentloc, playerMod, availableMoves, 2, -1);
+            RelativeMove(currentloc, playerMod, availableMoves, -2, 1);
+            RelativeMove(currentloc, playerMod, availableMoves, -2, -1);
+            RelativeMove(currentloc, playerMod, availableMoves, 1, -2);
+            RelativeMove(currentloc, playerMod, availableMoves, 1, 2);
+            RelativeMove(currentloc, playerMod, availableMoves, -1, -2);
+            RelativeMove(currentloc, playerMod, availableMoves, -1, 2);
+
+            return availableMoves;
         }
     }
 }
