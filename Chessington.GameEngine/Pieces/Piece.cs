@@ -21,11 +21,13 @@ namespace Chessington.GameEngine.Pieces
         
         protected static void RelativeMove(Square currentLoc, int playerMod, List<Square> availableMoves, int colMod, int rowMod)
         {
-            Square s = Square.At(currentLoc.Row + (rowMod * playerMod), currentLoc.Col + (colMod * playerMod)); // Gets the appropriate square
-            if (s == currentLoc)
-            {
+            int rowTarget = currentLoc.Row + (rowMod * playerMod);
+            int colTarget = currentLoc.Col + (colMod * playerMod);
+            Square s = Square.At(rowTarget, colTarget); // Gets the appropriate square
+            if(rowTarget < 0 || rowTarget > GameSettings.BoardSize-1 || colTarget < 0 || colTarget > GameSettings.BoardSize-1) // if invalid index
                 return;
-            }
+            if (s == currentLoc) // if current index
+                return;
             availableMoves.Add(s); // Adds move to list
         }
 
