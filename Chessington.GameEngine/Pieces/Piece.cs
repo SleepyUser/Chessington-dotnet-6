@@ -19,7 +19,7 @@ namespace Chessington.GameEngine.Pieces
             board.MovePiece(currentSquare, newSquare);
         }
         
-        protected static void RelativeMove(Square currentLoc, int playerMod, List<Square> availableMoves, int colMod, int rowMod)
+        protected void RelativeMove(Square currentLoc, int playerMod, List<Square> availableMoves, int colMod, int rowMod, Board board)
         {
             int rowTarget = currentLoc.Row + (rowMod * playerMod);
             int colTarget = currentLoc.Col + (colMod * playerMod);
@@ -28,10 +28,12 @@ namespace Chessington.GameEngine.Pieces
                 return;
             if (s == currentLoc) // if current index
                 return;
+            if (board.GetPiece(s) != null) 
+                return;
             availableMoves.Add(s); // Adds move to list
         }
 
-        protected static void AbsoluteMove(Square currentLoc, List<Square> availableMoves, int col,
+        protected void AbsoluteMove(Square currentLoc, List<Square> availableMoves, int col,
             int row)
         {
             Square s = Square.At(row, col); // Gets the appropriate square
