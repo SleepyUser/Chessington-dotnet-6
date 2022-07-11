@@ -8,6 +8,9 @@ namespace Chessington.GameEngine.Pieces
         public King(Player player)
             : base(player) { }
 
+        public bool Moved { get; private set; }
+        
+
         public override IEnumerable<Square> GetAvailableMoves(Board board)
         {
             Square currentloc = board.FindPiece(this);

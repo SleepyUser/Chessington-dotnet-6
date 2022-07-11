@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.DirectoryServices.ActiveDirectory;
 using System.Runtime.CompilerServices;
 using Chessington.GameEngine.Pieces;
 
@@ -41,7 +42,7 @@ namespace Chessington.GameEngine
             throw new ArgumentException("The supplied piece is not on the board.", "piece");
         }
 
-        public void MovePiece(Square from, Square to, bool enPassant = false)
+        public void MovePiece(Square from, Square to, bool enPassant = false, bool castling = false)
         {
             var movingPiece = _board[from.Row, from.Col];
             if (movingPiece == null) { return; }
@@ -49,6 +50,10 @@ namespace Chessington.GameEngine
             if (movingPiece.Player != CurrentPlayer)
             {
                 throw new ArgumentException("The supplied piece does not belong to the current player.");
+            }
+            else if (castling == true)
+            {
+                throw new NotImplementedException(); //Need to implement check for check to disallow move
             }
 
             //If the space we're moving to is occupied, we need to mark it as captured.
@@ -71,7 +76,7 @@ namespace Chessington.GameEngine
             CurrentPlayer = movingPiece.Player == Player.White ? Player.Black : Player.White;
             OnCurrentPlayerChanged(CurrentPlayer);
         }
-        
+
         public delegate void PieceCapturedEventHandler(Piece piece);
         
         public event PieceCapturedEventHandler PieceCaptured;
@@ -90,6 +95,52 @@ namespace Chessington.GameEngine
         {
             var handler = CurrentPlayerChanged;
             handler?.Invoke(player);
+        }
+
+        public bool CheckCheck(Player threatened)
+        {
+            foreach (var piece in _board)
+            {
+                if (piece.Player != threatened)
+                {
+                    foreach (Square s in piece.GetAvailableMoves(this))
+                    {
+                        Piece squarePiece = GetPiece(s);
+                        if (squarePiece != null && squarePiece.GetType() == typeof(King))
+                        {
+                            return true;
+                        }
+                    }
+                }
+            }
+            return false;
+        }
+
+        public bool CheckMateCheck(Player threatened)
+        {
+            if (CheckCheck(threatened))
+            {
+                Board parallelBoard = null;
+                foreach (var piece in _board)
+                {
+                    if (piece.Player != threatened)
+                    {
+                        parallelBoard= (Board)this.MemberwiseClone();
+                        foreach (Square s in piece.GetAvailableMoves(this))
+                        {
+                            Piece squarePiece = GetPiece(s);
+                            squarePiece.MoveTo(parallelBoard,s);
+                            if (squarePiece != null && squarePiece.GetType() == typeof(King))
+                            {
+                                return true;
+                            }
+                        }
+                    }
+                }
+                return false;
+            }
+
+            return false;
         }
     }
 }

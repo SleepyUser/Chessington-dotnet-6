@@ -8,6 +8,7 @@ namespace Chessington.GameEngine.Pieces
     {
         public Rook(Player player)
             : base(player) { }
+        public bool Moved { get; private set; }
 
         public override IEnumerable<Square> GetAvailableMoves(Board board)
         {
@@ -20,6 +21,11 @@ namespace Chessington.GameEngine.Pieces
                 RelativeMove(currentLoc, availableMoves, -i, 0, board);
                 RelativeMove(currentLoc, availableMoves, 0, i, board);
                 RelativeMove(currentLoc, availableMoves, 0, -i, board);
+            }
+
+            if (Moved == false)
+            {
+                
             }
             
             Console.WriteLine(availableMoves);

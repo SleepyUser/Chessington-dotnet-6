@@ -29,5 +29,21 @@ namespace Chessington.GameEngine.Tests
 
             location.Should().Be(square);
         }
+
+        [Test]
+        public void CheckTest()
+        {
+            var board = new Board();
+            
+            var queen = new Queen(Player.White);
+            var squareQ = Square.At(6, 4);
+            
+            var king = new King(Player.Black);
+            var squareK = Square.At(6, 2);
+            
+            board.AddPiece(squareQ, queen);
+            board.AddPiece(squareK, king);
+            board.CheckCheck(threatened: Player.Black);
+        }
     }
 }
