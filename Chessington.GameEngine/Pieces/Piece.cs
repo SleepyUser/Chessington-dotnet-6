@@ -19,7 +19,7 @@ namespace Chessington.GameEngine.Pieces
             board.MovePiece(currentSquare, newSquare);
         }
         
-        protected void RelativeMove(Square currentLoc, List<Square> availableMoves, int colMod, int rowMod, Board board, int playerMod = 1, bool ignorePath = true, bool canTake = true)
+        protected void RelativeMove(Square currentLoc, List<Square> availableMoves, int colMod, int rowMod, Board board, int playerMod = 1, bool ignorePath = false, bool canTake = true)
         {
             int rowTarget = currentLoc.Row + (rowMod * playerMod);
             int colTarget = currentLoc.Col + (colMod * playerMod);
